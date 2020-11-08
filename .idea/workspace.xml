@@ -45,6 +45,13 @@
   <component name="TaskManager">
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mine/Array/Problem.js" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
