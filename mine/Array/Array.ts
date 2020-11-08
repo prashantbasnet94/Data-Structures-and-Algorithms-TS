@@ -3,13 +3,14 @@ class ArrayPrashant {
 
     constructor(incomingArray:Array<number>) {
         this.arrayOfNumber=incomingArray;
-        this.printMyArray();
     }
-    printMyArray(){
-        console.log(this.arrayOfNumber);
-    }
+
+
+
+    // push into array
+    // pop an item out
+    // delete item from array
+    // define a print func to print it all out
 
 
 }
-
-let arrayPrashant = new ArrayPrashant([1,11,2,13,])
