@@ -1,5 +1,7 @@
 var ReversingString = /** @class */ (function () {
     function ReversingString(givenText) {
+        var _this = this;
+        this.reverse3 = function () { return _this.givenString.split('').reverse().join(''); };
         this.givenString = givenText;
     }
     ReversingString.prototype.reverseMyString = function () {
@@ -15,13 +17,20 @@ var ReversingString = /** @class */ (function () {
         }
         // [ 'M', 'y', ' ', 'N', 'a', 'm', 'e' ]
         // then reverse the array starting from end and decrementing it
+        //1st way
         for (var reversingArrayDecrementingIndex = stringLength - 1; reversingArrayDecrementingIndex >= 0; reversingArrayDecrementingIndex--) {
             reversedArray.push(stringToArray[reversingArrayDecrementingIndex]);
         }
+        // 2nd way
         // finally merge the array
-        console.log(reversedArray.join(''));
+        reversedArray.join('');
+    };
+    ReversingString.prototype.reverse2 = function () {
+        return this.givenString.split('').reverse().join('');
     };
     return ReversingString;
 }());
 var object = new ReversingString("My Name");
-object.reverseMyString();
+console.log(object.reverse3());
+// console.log(object.reverse2());
+// object.reverseMyString();

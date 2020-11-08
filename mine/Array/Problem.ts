@@ -20,17 +20,28 @@ class ReversingString{
         }
         // [ 'M', 'y', ' ', 'N', 'a', 'm', 'e' ]
         // then reverse the array starting from end and decrementing it
-            for( let reversingArrayDecrementingIndex=stringLength-1; reversingArrayDecrementingIndex>=0;reversingArrayDecrementingIndex--){
-                reversedArray.push(stringToArray[reversingArrayDecrementingIndex])
 
-            }
+        //1st way
+        for( let reversingArrayDecrementingIndex=stringLength-1; reversingArrayDecrementingIndex>=0;reversingArrayDecrementingIndex--){
+            reversedArray.push(stringToArray[reversingArrayDecrementingIndex])
+        }
+
+        // 2nd way
 
         // finally merge the array
         reversedArray.join('')
      
     }
 
+    public reverse2(){
+        return this.givenString.split('').reverse().join('')
+    }
+
+    public reverse3 =()=>this.givenString.split('').reverse().join('')
+
 }
 
 let object = new ReversingString("My Name")
-object.reverseMyString();
+console.log(object.reverse3());
+// console.log(object.reverse2());
+// object.reverseMyString();
