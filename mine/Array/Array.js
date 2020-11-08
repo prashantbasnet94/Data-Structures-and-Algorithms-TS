@@ -1,11 +1,23 @@
-var ArrayPrashant = /** @class */ (function () {
-    function ArrayPrashant(incomingArray) {
-        this.arrayOfNumber = incomingArray;
-        this.printMyArray();
+var Array_Made = /** @class */ (function () {
+    // Define a constructor to initialize it
+    function Array_Made() {
+        this.length = 0;
+        this.data = Object.create({});
     }
-    ArrayPrashant.prototype.printMyArray = function () {
-        console.log(this.arrayOfNumber);
+    // Define a push function
+    Array_Made.prototype.push = function (incomingNumber) {
+        if (typeof incomingNumber === 'number') {
+            this.data[this.length] = incomingNumber;
+            this.length++;
+        }
     };
-    return ArrayPrashant;
+    Array_Made.prototype.printArray = function () {
+        console.log(this.data);
+        console.log(this.length);
+    };
+    return Array_Made;
 }());
-var arrayPrashant = new ArrayPrashant([1, 11, 2, 13,]);
+var object_of_array = new Array_Made();
+object_of_array.push(5);
+object_of_array.push(15);
+object_of_array.printArray();
